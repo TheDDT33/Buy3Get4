@@ -31,19 +31,19 @@ L2 = Label(F1, textvariable=v_total, font=FONT1, fg='BLUE')
 L2.pack()
 
 def Total(event=None):
-    price = v_price.get()
+    price =int(v_price.get())
     ea = int(v_ea.get())
 
     if ea >= 4 and ea < 8:
-        total = int(price) * (ea-1)
+        total = price * (ea-1)
     elif ea >=  8 and ea < 12:
-        total = int(price) * (ea-2)
+        total = price * (ea-2)
     elif ea >= 12 and ea < 14:
-        total = int(price) * (ea-3)
+        total = price * (ea-3)
     elif ea >=  14 and ea < 16:
-        total = int(price) * (ea-4)
+        total = price * (ea-4)
     else :
-        total = int(price) * int(ea)
+        total = price * ea
         
     v_price.set('')
     v_ea.set('')
